@@ -8,12 +8,14 @@
 
 ### posts/posts.json file
 
+The file which contains the metadata of the articles stored on this repository.
+
 ```json
 {
     "posts": [
         {
             "name": "Title of the article",
-            "status": "draft|publish|published",
+            "status": "doNotPublish|draft|publish|published",
             "folder": "folderName",
             "tags": [
                 "tag1",
