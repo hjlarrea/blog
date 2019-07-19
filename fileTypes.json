@@ -1,0 +1,8 @@
+{
+    "powershell": "ps1",
+    "json": "json",
+    "yaml": "yml",
+    "markdown": "md",
+    "xml": "xml",
+    "cs": "cs"
+}

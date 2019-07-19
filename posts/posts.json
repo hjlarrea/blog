@@ -1,0 +1,14 @@
+{
+    "posts": [
+        {
+            "name": "Use Azure Functions to enforce Pull Request Reviewers in Azure DevOps",
+            "status": "publish",
+            "folder": "azFunctionsPRDevOps",
+            "tags": [
+                "Azure",
+                "Azure DevOps",
+                "Policies"
+            ]
+        }
+    ]
+}
