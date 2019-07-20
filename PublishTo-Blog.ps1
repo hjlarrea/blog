@@ -11,5 +11,5 @@ foreach($ArticleToPublish in $ArticlesToPublish.posts) {
 
     .\Format-Gists.ps1 -Path $path -GitHubPAT $GitHubPAT -PostName $ArticleToPublish.name
     .\Format-Images.ps1 -Path $path
-    .\Publish-Article.ps1 -Title $ArticleToPublish.name -Path $path -Tags $ArticleToPublish.tags -userId $MediumUserId -Token $MediumToken
+    .\Publish-Article.ps1 -Title $ArticleToPublish.name -Path $path -Tags $ArticleToPublish.tags -userId $MediumUserId -Token $MediumToken -PublishStatus $ArticleToPublish.status 
 }

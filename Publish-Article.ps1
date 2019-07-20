@@ -4,7 +4,8 @@ param(
     [parameter(Mandatory=$true)][string]$Path,
     [parameter(Mandatory=$true)][string[]]$Tags,
     [parameter(Mandatory=$true)][string]$UserId ,
-    [parameter(Mandatory=$true)][securestring]$Token
+    [parameter(Mandatory=$true)][securestring]$Token,
+    [parameter(Mandatory=$true)][string]$PublishStatus
 )
 
 $tempCredential=New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "medium",$token
@@ -22,7 +23,7 @@ $body = @{
     "contentFormat" = "markdown"
     "content" = $post
     "tags" = $tags
-    "publishStatus" = $publishStatus
+    "publishStatus" = $PublishStatus
 }
 
 Invoke-RestMethod -Method Post -Uri $uri -Body $($body | convertto-json) -Headers $headers -ContentType "application/json" -ErrorAction Stop

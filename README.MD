@@ -17,7 +17,8 @@ The file which contains the metadata of the articles stored on this repository.
     "posts": [
         {
             "name": "Title of the article",
-            "status": "doNotPublish|draft|publish|published",
+            "action": "doNotPublish | publish | published",
+            "status": "draft | public",
             "folder": "folderName",
             "tags": [
                 "tag1",
