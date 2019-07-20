@@ -22,7 +22,7 @@ Once you have deployed and connected all the components, the customization left 
 First of all, you'll need, 2 Application Settings to be registered in your Function App:
 
 - **secretURI**: this is the URI to the secret stored in your Azure Key Vault.
-- **reviewerId**: here I've stored the ID of the object (a group in my case) that I want to enforce to every Pull Request. In order to understand how to obtain this information please refer toÂ https://docs.microsoft.com/en-us/rest/api/vsts/core/teams/get%20all%20teams?view=vsts-rest-4.1 (TIP: as this is a simple GET, you can paste the URI on a tab of a browser that's already validated against your Azure DevOps Organization).
+- **reviewerId**: here I've stored the ID of the object (a group in my case) that I want to enforce to every Pull Request. In order to understand how to obtain this information please refer to https://docs.microsoft.com/en-us/rest/api/vsts/core/teams/get%20all%20teams?view=vsts-rest-4.1 (TIP: as this is a simple GET, you can paste the URI on a tab of a browser that's already validated against your Azure DevOps Organization).
 
 After that is done, in your Azure Function, you'll need a 'function.proj' file which contains the following references to the NuGet packages used to interact with Azure AD and Azure Key Vault:
 

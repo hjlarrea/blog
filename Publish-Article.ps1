@@ -3,8 +3,8 @@ param(
     [parameter(Mandatory=$true)][string]$Title,
     [parameter(Mandatory=$true)][string]$Path,
     [parameter(Mandatory=$true)][string[]]$Tags,
-    [parameter(Mandatory=$true)][string]$userId ,
-    [parameter(Mandatory=$true)][securestring]$token
+    [parameter(Mandatory=$true)][string]$UserId ,
+    [parameter(Mandatory=$true)][securestring]$Token
 )
 
 $tempCredential=New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "medium",$token

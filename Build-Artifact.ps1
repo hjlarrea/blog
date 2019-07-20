@@ -7,6 +7,8 @@ New-Item -Path .\publish -Name "posts" -ItemType Directory
 Copy-Item -Path ".\Format-Gists.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Format-Images.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Publish-Article.ps1" -Destination ".\publish" -Force
+Copy-Item -Path ".\PublishTo-Blog.ps1" -Destination ".\publish" -Force
+Copy-Item -Path ".\fileTypes.json" -Destination ".\publish" -Force
 
 $ArticlesToPublish | Where-Object { $_.posts.status -eq "publish"} | ConvertTo-Json -Depth 3 | Out-File .\publish\posts\posts.json
 
