@@ -9,6 +9,7 @@ New-Item -Name publish -ItemType Directory
 New-Item -Path .\publish -Name "posts" -ItemType Directory
 
 Copy-Item -Path ".\Format-Gists.ps1" -Destination ".\publish" -Force
+Copy-Item -Path ".\Format-Articles.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Format-Images.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Publish-Article.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\PublishTo-Blog.ps1" -Destination ".\publish" -Force

@@ -5,7 +5,7 @@ param(
     [parameter(Mandatory=$true)][string[]]$Tags,
     [parameter(Mandatory=$true)][string]$UserId ,
     [parameter(Mandatory=$true)][securestring]$Token,
-    [parameter(Mandatory=$true)][string]$PublishStatus
+    [parameter(Mandatory=$true)][ValidateSet('draft','public')][string]$PublishStatus
 )
 
 $tempCredential=New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList "medium",$token

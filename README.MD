@@ -18,7 +18,6 @@ The file which contains the metadata of the articles stored on this repository.
         {
             "name": "Title of the article",
             "action": "doNotPublish | publish | published",
-            "status": "draft | public",
             "folder": "folderName",
             "tags": [
                 "tag1",
