@@ -9,6 +9,16 @@
                 "Azure DevOps",
                 "Policies"
             ]
+        },
+        {
+            "name": "Azure AD Managed Service Identities",
+            "action": "publish",
+            "folder": "azADManagedServiceIndetity",
+            "tags": [
+                "Azure Active Directory",
+                "Service Identity",
+                "Service Principal Name"
+            ]
         }
     ]
 }
