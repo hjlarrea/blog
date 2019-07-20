@@ -106,7 +106,7 @@ function Set-CodeSnippet {
 }
 
 $PostFolderName = Split-Path $Path -Parent | Split-Path -Leaf
-$boundaries = Get-FirstCodeSnippetBoundaries -Path .\posts\azFunctionsPRDevOps\post.md -ErrorAction Stop
+$boundaries = Get-FirstCodeSnippetBoundaries -Path $Path -ErrorAction Stop
 $snippetCount = 0
 
 while ($boundaries) {
