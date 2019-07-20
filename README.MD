@@ -17,6 +17,7 @@ The file which contains the metadata of the articles stored on this repository.
     "posts": [
         {
             "name": "Title of the article",
+            "dateAuthored": "2018.10.15",
             "action": "doNotPublish | publish | published",
             "folder": "folderName",
             "tags": [
