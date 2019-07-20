@@ -1,5 +1,7 @@
 # Introduction
 
+Visit the blog at https://www.hernanjlarrea.com. This is the repository used for authoring the content and publishing the content using CI/CD practices.
+
 ## Branches
 - **Master**: Used for writing and commiting.
 - **Publish**: When code is merged to publish and pushed against GitHub, the CI/CD process is executed.
