@@ -2,6 +2,7 @@
     "posts": [
         {
             "name": "Use Azure Functions to enforce Pull Request Reviewers in Azure DevOps",
+            "dateAuthored": "2018.10.15",
             "action": "publish",
             "folder": "azFunctionsPRDevOps",
             "tags": [
@@ -12,6 +13,7 @@
         },
         {
             "name": "Azure AD Managed Service Identities",
+            "dateAuthored": "2018.07.29",
             "action": "publish",
             "folder": "azADManagedServiceIndetity",
             "tags": [

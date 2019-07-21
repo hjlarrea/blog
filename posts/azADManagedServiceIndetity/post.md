@@ -60,7 +60,7 @@ $response = Invoke-WebRequest -Uri 'http://169.254.169.254/metadata/identity/oau
 $token=($response.content | convertfrom-json).access_token
 ```
 
-(Take a note in the IMDS URL we are using to request the token, we are specifying the resource we want that token for: ‘http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F2Fvault.azure.net‘.)
+(Take a note in the IMDS URL we are using to request the token, we are specifying the resource we want that token for: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F2Fvault.azure.net'.)
 
 Finally, once you have obtained the token, you just repeat the same query we have used before to obtain the Secret:
 
