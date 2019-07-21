@@ -1,3 +1,5 @@
+[![Build Status](https://hjlarrea.visualstudio.com/Blog/_apis/build/status/Blog-CI?branchName=publish)](https://hjlarrea.visualstudio.com/Blog/_build/latest?definitionId=2&branchName=publish)
+
 # Introduction
 
 Visit the blog at https://www.hernanjlarrea.com. This is the repository used for authoring the content and publishing the content using CI/CD practices.
