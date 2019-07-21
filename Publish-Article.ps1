@@ -3,7 +3,7 @@ param(
     [parameter(Mandatory=$true)][string]$Title,
     [parameter(Mandatory=$true)][string]$Path,
     [parameter(Mandatory=$true)][string[]]$Tags,
-    [parameter(Mandatory=$true)][string]$PublicationID ,
+    [parameter(Mandatory=$true)][string]$UserId ,
     [parameter(Mandatory=$true)][securestring]$Token,
     [parameter(Mandatory=$true)][ValidateSet('draft','public')][string]$PublishStatus
 )
@@ -16,7 +16,7 @@ $headers = @{
 
 $post = (get-content $Path -Raw).ToString()
 
-$uri = "https://api.medium.com/v1/publications/{0}/posts" -f $PublicationID
+$uri = "https://api.medium.com/v1/users/{0}/posts" -f $userId
 
 $body = @{
     "title" = $Title
