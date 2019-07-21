@@ -1,4 +1,4 @@
-[![Build Status](https://hjlarrea.visualstudio.com/Blog/_apis/build/status/Blog-CI?branchName=publish)](https://hjlarrea.visualstudio.com/Blog/_build/latest?definitionId=2&branchName=publish)
+![Build Status](https://hjlarrea.visualstudio.com/Blog/_apis/build/status/Blog-CI?branchName=publish)
 
 # Introduction
 
