@@ -14,6 +14,7 @@ Copy-Item -Path ".\Format-Images.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Publish-Article.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\PublishTo-Blog.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\fileTypes.json" -Destination ".\publish" -Force
+Copy-Item -Path ".\blog.tests.ps1" -Destination ".\publish" -Force
 
 $ArticlesToPublish | Where-Object { $_.posts.action -eq "publish"} | ConvertTo-Json -Depth 3 | Out-File .\publish\posts\posts.json
 
