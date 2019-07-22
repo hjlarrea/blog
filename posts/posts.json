@@ -21,6 +21,17 @@
                 "Service Identity",
                 "Service Principal Name"
             ]
+        },
+        {
+            "name": "Enabling Advanced Threat Protection for Azure Database for MySQL programmatically",
+            "dateAuthored": "2019.04.06",
+            "action": "publish",
+            "folder": "azMySQLAdvancedThreatProtection",
+            "tags": [
+                "Azure",
+                "MySQL",
+                "Advanced Threat Protection"
+            ]
         }
     ]
 }

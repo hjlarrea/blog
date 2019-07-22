@@ -37,29 +37,35 @@ foreach ($post in $posts) {
             }
 
             It "All images in post.md should be located under the img directory." {
-                0..($postContent.Length) | ForEach-Object {
-                    if($postContent[$_] -match "^!\[") {
-                        $imageFileName = $postContent[$_].split("/")[-1].split(")")[0]
-                        ".\posts\{0}\img\{1}" -f $post.folder,$imageFileName | Should -Exist
+                if($postContent.Length -gt 0) {
+                    0..($postContent.Length) | ForEach-Object {
+                        if($postContent[$_] -match "^!\[") {
+                            $imageFileName = $postContent[$_].split("/")[-1].split(")")[0]
+                            ".\posts\{0}\img\{1}" -f $post.folder,$imageFileName | Should -Exist
+                        }
                     }
                 }
             }
 
             It "All image references in post.md should be named 'image<nameOfTheFile>'." {
-                0..($postContent.Length) | ForEach-Object {
-                    if($postContent[$_] -match "^!\[") {
-                        $imageFile = $postContent[$_].split("/")[-1].split(")")[0]
-                        $imageName = $imageFile.split(".")[0]
-                        $postContent[$_] | Should be "![image$($imageName)](./img/$imageFile)"
+                if($postContent.Length -gt 0) {
+                    0..($postContent.Length) | ForEach-Object {
+                        if($postContent[$_] -match "^!\[") {
+                            $imageFile = $postContent[$_].split("/")[-1].split(")")[0]
+                            $imageName = $imageFile.split(".")[0]
+                            $postContent[$_] | Should be "![image$($imageName)](./img/$imageFile)"
+                        }
                     }
                 }
             }
 
             It "All images in the img directory should be used in post.md." {
-                $imageFiles = (Get-ChildItem -Path $(".\posts\{0}\img" -f $post.folder)).Name
-                foreach ($imageFile in $imageFiles) {
-                    $imageName = $imageFile.split(".")[0]
-                    $postContent | Should -Contain "![image$($imageName)](./img/$imageFile)"
+                if(Test-Path -Path $(".\posts\{0}\img" -f $post.folder)) {
+                    $imageFiles = (Get-ChildItem -Path $(".\posts\{0}\img" -f $post.folder)).Name
+                    foreach ($imageFile in $imageFiles) {
+                        $imageName = $imageFile.split(".")[0]
+                        $postContent | Should -Contain "![image$($imageName)](./img/$imageFile)"
+                    }
                 }
             }
         }
@@ -67,9 +73,11 @@ foreach ($post in $posts) {
         Context -Name "Testing code snippets" {
             $boundaries = New-Object -TypeName System.Collections.ArrayList
 
-            0..($postContent.Length) | ForEach-Object {
-                if($postContent[$_] -like '``````*') {
-                    $boundaries.Add($_) | Out-Null
+            if($postContent.Length -gt 0) {
+                0..($postContent.Length) | ForEach-Object {
+                    if($postContent[$_] -like '``````*') {
+                        $boundaries.Add($_) | Out-Null
+                    }
                 }
             }
 
