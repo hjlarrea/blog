@@ -32,6 +32,17 @@
                 "MySQL",
                 "Advanced Threat Protection"
             ]
+        },
+        {
+            "name": "ARM Property Transformer and Collector template",
+            "dateAuthored": "2019.01.20",
+            "action": "publish",
+            "folder": "armPropertyTransformerCollector",
+            "tags": [
+                "Azure",
+                "ARM",
+                "Resource Manager"
+            ]
         }
     ]
 }
