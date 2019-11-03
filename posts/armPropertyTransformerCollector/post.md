@@ -105,7 +105,7 @@ So as you can see the idea is to transform the original content of the parameter
 
 Now that we have seen how the input is transformed, let see how this template works under the hood. The easiest way I found to demonstrate this, is using an interaction / sequence diagram.
 
-![image](./img/1.png)
+![image1](./img/1.png)
 
 
 1. callingTemplate,json makes a deployment of a linked template, referring to collector.json. The deployment is named **collector** and the parameter **source** is provided with the content of the **networkSecuritySettings** parameter of the callingTemplate.json. *(Take notice as the content of the **networkSecuritySettings** parameter, as it does contain 1 object called **securityRules** which contains an array of 2 objects. It is the array of items that is provided to the collector.json template, not the object itself. When the collector.json is invoked, the **source** parameter is initialized using `[parameters(‘networkSecurityGroupsSettings’).securityRules]`, sending the array inside 

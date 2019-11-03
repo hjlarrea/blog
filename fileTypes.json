@@ -4,5 +4,6 @@
     "yaml": "yml",
     "markdown": "md",
     "xml": "xml",
-    "cs": "cs"
+    "cs": "cs",
+    "bash": "sh"
 }
