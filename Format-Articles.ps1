@@ -2,7 +2,7 @@ param(
     [parameter(Mandatory=$true)][securestring]$GitHubPAT
 )
 
-$ArticlesToPublish = Get-Content .\posts\posts.json | ConvertFrom-Json
+$ArticlesToPublish = Get-Content .\posts\posts.json | ConvertFrom-Json | Where-Object { $_.posts.action -eq "Publish" }
 
 foreach($ArticleToPublish in $ArticlesToPublish.posts) {
     $path = ".\posts\"+$ArticleToPublish.folder+"\post.md"
