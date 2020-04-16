@@ -8,13 +8,8 @@ if(Test-Path -Path .\publish) { Remove-Item -Path .\publish -Recurse -Force }
 New-Item -Name publish -ItemType Directory
 New-Item -Path .\publish -Name "posts" -ItemType Directory
 
-Copy-Item -Path ".\Format-Gists.ps1" -Destination ".\publish" -Force
-Copy-Item -Path ".\Format-Articles.ps1" -Destination ".\publish" -Force
-Copy-Item -Path ".\Format-Images.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\Publish-ArticleToMedium.ps1" -Destination ".\publish" -Force
 Copy-Item -Path ".\PublishTo-Medium.ps1" -Destination ".\publish" -Force
-Copy-Item -Path ".\fileTypes.json" -Destination ".\publish" -Force
-Copy-Item -Path ".\blog.tests.ps1" -Destination ".\publish" -Force
 
 $ArticlesToPublish | Where-Object { $_.posts.action -eq "publish"} | ConvertTo-Json -Depth 3 | Out-File .\publish\posts\posts.json
 

@@ -43,6 +43,17 @@
                 "ARM",
                 "Resource Manager"
             ]
+        },
+        {
+            "name": "Azure Database for MySQL and Replication",
+            "dateAuthored": "2018.12.23",
+            "action": "publish",
+            "folder": "azDBMySQLReplication",
+            "tags": [
+                "Azure",
+                "MySQL",
+                "Replication"
+            ]
         }
     ]
 }
